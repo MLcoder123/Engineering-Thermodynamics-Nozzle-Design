@@ -1,0 +1,308 @@
+:root {
+  --bg: #fff2f7;
+  --panel: #ffffff;
+  --ink: #65445b;
+  --muted: #a4869a;
+  --blue: #e78bb5;
+  --line: #f5d9e6;
+  --green: #70b99b;
+  --amber: #d99a58;
+}
+
+/* 全局 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #fff3f8, #f9f1ff);
+  color: var(--ink);
+  font: 15px/1.7 system-ui, "Microsoft YaHei", sans-serif;
+}
+
+/* 页面主体 */
+.wrap {
+  max-width: 1180px;
+  margin: auto;
+  padding: 28px 18px 56px;
+}
+
+/* 顶部标题区域 */
+.hero {
+  background: linear-gradient(120deg, #e99abb, #c8a4e8);
+  color: white;
+  padding: 32px;
+  border-radius: 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 25px #e8a5c455;
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: clamp(24px, 4vw, 34px);
+}
+
+.hero p {
+  margin: 0;
+  color: #fff5fa;
+}
+
+/* 布局 */
+.layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 18px;
+}
+
+/* 卡片 */
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 19px;
+  padding: 21px;
+  box-shadow: 0 6px 22px #d99dbb20;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 26px #d99dbb35;
+}
+
+.card h2 {
+  font-size: 18px;
+  color: #bd6f9a;
+  margin: 0 0 16px;
+}
+
+/* 输入框 */
+.field {
+  margin: 13px 0;
+}
+
+.field label {
+  display: block;
+  font-weight: 650;
+  margin-bottom: 5px;
+  color: #815d75;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #edc9dc;
+  border-radius: 11px;
+  font: inherit;
+  background: #fff9fc;
+  color: var(--ink);
+  outline: none;
+  transition: 0.2s;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #df91b8;
+  box-shadow: 0 0 0 3px #f8dce9;
+  background: white;
+}
+
+.unit {
+  color: var(--muted);
+  font-size: 17px;
+  margin-top: 3px;
+}
+
+/* 按钮 */
+.btn {
+  border: 0;
+  background: linear-gradient(120deg, #ed9cbe, #c69be1);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px #dba2c455;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 17px #dba2c477;
+}
+
+.btn.secondary {
+  background: #f8e9f2;
+  color: #b66e98;
+  box-shadow: none;
+}
+
+/* 导航栏 */
+.topnav {
+  display: flex;
+  gap: 12px;
+  margin: 0 2px 16px;
+  flex-wrap: wrap;
+}
+
+.topnav a {
+  color: #b66e98;
+  text-decoration: none;
+  font-weight: 700;
+  background: #fff;
+  border: 1px solid #f3d5e4;
+  padding: 8px 14px;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.topnav a:hover {
+  background: #fbe5f0;
+  transform: translateY(-2px);
+}
+
+/* 提示信息 */
+.hint {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.main {
+  display: grid;
+  gap: 18px;
+}
+
+.status {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #f0eaff;
+  color: #9368ba;
+  border: 1px solid #e4d5f5;
+}
+
+.status.warn {
+  background: #fff5e9;
+  color: var(--amber);
+}
+
+/* 数据指标 */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.metric {
+  background: linear-gradient(145deg, #fff8fb, #fdf3fa);
+  border: 1px solid #f3dce9;
+  padding: 13px;
+  border-radius: 14px;
+}
+
+.metric small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.metric strong {
+  display: block;
+  font-size: 20px;
+  color: #c46f9e;
+  margin-top: 4px;
+  overflow-wrap: anywhere;
+}
+
+.metric em {
+  font-style: normal;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* 喷管示意图 */
+.svgwrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.svgwrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #fffafd;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+/* 数据表格 */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td,
+.table th {
+  padding: 9px 8px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+.table th {
+  color: #b17a9b;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* 公式区域 */
+.eq {
+  background: #fff5fa;
+  border-left: 3px solid #df91b8;
+  padding: 10px 13px;
+  margin: 9px 0;
+  border-radius: 7px;
+  font-family: ui-monospace, Consolas, monospace;
+  overflow-wrap: anywhere;
+}
+
+/* 页脚 */
+.foot {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 18px;
+}
+
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* 状态标签 */
+.tag {
+  display: inline-block;
+  padding: 3px 9px;
+  background: #eaf7f0;
+  color: #69a98b;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+/* 手机适配 */
+@media(max-width:850px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .two {
+    grid-template-columns: 1fr;
+  }
+}
